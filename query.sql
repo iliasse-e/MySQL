@@ -23,3 +23,13 @@ SELECT * FROM movie WHERE title LIKE '%a'; -- End with 'a'
 SELECT * FROM movie WHERE title LIKE '%a%' -- Contains 
 
 SELECT * FROM movie WHERE title LIKE 'a%s' -- Starts with 'a' ends with 's'
+
+  
+-- Arithmetics operators & alias
+
+  
+SELECT prix + taxe AS prix_total FROM produits; -- Alias d'une opération
+
+SELECT *, (revenue - budget) AS profit FROM movie; -- Ajoute une colonne profit
+
+SELECT title, (revenue - budget) AS profit FROM movie WHERE (revenue - budget) < 0; -- On doit répéter l'opération dans le WHERE
