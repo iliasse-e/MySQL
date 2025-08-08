@@ -33,3 +33,8 @@ SELECT prix + taxe AS prix_total FROM produits; -- Alias d'une opération
 SELECT *, (revenue - budget) AS profit FROM movie; -- Ajoute une colonne profit
 
 SELECT title, (revenue - budget) AS profit FROM movie WHERE (revenue - budget) < 0; -- On doit répéter l'opération dans le WHERE
+
+
+-- REGEX
+
+SELECT nom FROM employes WHERE nom REGEXP '^A';
