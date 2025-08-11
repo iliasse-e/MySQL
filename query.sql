@@ -38,3 +38,17 @@ SELECT title, (revenue - budget) AS profit FROM movie WHERE (revenue - budget) <
 -- REGEX
 
 SELECT nom FROM employes WHERE nom REGEXP '^A';
+
+
+-- NOT
+
+SELECT * FROM country WHERE NOT country_name = "Austria";
+
+
+-----------------------------
+-- SQL Aggregate Functions --
+-----------------------------
+
+-- MAX() & MIN()
+
+SELECT MAX(popularity) FROM movie; -- Get Maximum of a column
