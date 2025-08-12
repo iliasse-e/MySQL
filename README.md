@@ -59,7 +59,7 @@ VALUES (
 
 Sélectionner des données :
 
-Voir le document : [Use Select](./select-queries.sql)
+[Voir la commande Select](./select-queries.sql)
 
 
 Supprimer des données :
