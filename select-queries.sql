@@ -1,10 +1,3 @@
-## 
-
-SHOW databases;
-
-USE movies;
-
-SHOW tables;
 
 SELECT * FROM movie LIMIT 5, 5; -- LIMIT is good for pagination
 
