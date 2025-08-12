@@ -59,14 +59,27 @@ VALUES (
 
 Sélectionner des données :
 
+Voir le document : [Use Select]('./select-queries.sql')
+
+
+Supprimer des données :
+
 ```sql
+DELETE FROM recipes WHERE title = 'Takoyaki 1';
+
+DELETE FROM recipes; -- Attention cette commande supprime la table
 ```
 
+Mettre à jour des données :
+
 
 ```sql
+UPDATE recipes SET title = 'Takoyaki 1'; -- Attention cette commande reset toute la table
+
+UPDATE recipes SET title = 'Salade niçoise' WHERE title LIKE 'salade%';
 ```
 
-
+## Clé primaire et index
 
 ```sql
 ```
