@@ -2,7 +2,7 @@
 
 Créer une table :
 
-```
+```sql
 CREATE TABLE posts (
   title VARCHAR(150),
   content TEXT,
