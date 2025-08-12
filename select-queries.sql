@@ -16,6 +16,9 @@ SELECT * FROM produits WHERE prix BETWEEN 10 AND 20; -- BETWEEN min AND max
 
 SELECT * FROM employes WHERE (departement = 'Ventes' OR departement = 'IT') AND salaire > 3000; -- Using () is crucial to respect an order
 
+
+-- LIKE est différent du = , il permet d'ouvrir une recherche plus large (il est indifferent à la majuscule/minuscule)
+
 SELECT * FROM movie WHERE title LIKE 'a%'; -- Starts with 'a'
 
 SELECT * FROM movie WHERE title LIKE '%a'; -- End with 'a'
@@ -23,6 +26,7 @@ SELECT * FROM movie WHERE title LIKE '%a'; -- End with 'a'
 SELECT * FROM movie WHERE title LIKE '%a%' -- Contains 
 
 SELECT * FROM movie WHERE title LIKE 'a%s' -- Starts with 'a' ends with 's'
+  
 
 -- IN
 
