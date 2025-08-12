@@ -93,3 +93,5 @@ UPDATE recipes SET title = 'Salade niçoise' WHERE title LIKE 'salade%';
 
 ```sql
 ```
+
+## EXPLAIN QUERY PLAN
