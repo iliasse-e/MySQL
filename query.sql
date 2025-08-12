@@ -24,6 +24,10 @@ SELECT * FROM movie WHERE title LIKE '%a%' -- Contains
 
 SELECT * FROM movie WHERE title LIKE 'a%s' -- Starts with 'a' ends with 's'
 
+-- IN
+
+SELECT title FROM recipes WHERE title IN ('Harira', 'Salade de fruits'); -- Plusieurs données
+
   
 -- Arithmetics operators & alias
 
