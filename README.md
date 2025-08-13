@@ -172,7 +172,7 @@ CREATE TABLE IF NOT EXISTS recipes (
 
 ## Agrégation des données
 
-`COUNT`, `SUM` , `` ...
+`COUNT`, `SUM` , `AVG` ...
 
 ```sql
 SELECT GROUP_CONCAT(title, ' - ') as merged_recipes -- le ' - ' est identique au join en Javascript
@@ -215,6 +215,25 @@ JOIN category c
 ON category_id = c.id
 GROUP BY c.label, r.title; -- On regroupe par label et par titre, ce qui va dupliquer certains label
 ```
+
+## LIMIT & ORDER BY
+
+```sql
+ODER BY count ASC -- Ou bien DESC
+
+-- On peut chainer les ORDER BY :
+
+ODER BY count DESC, i.name ASC
+```
+
+Deux syntaxes pour `LIMIT` :
+
+```sql
+LIMIT 3 OFFSET 2;
+
+LIMIT 2, 3;
+```
+
 
 ## EXPLAIN QUERY PLAN
 
