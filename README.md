@@ -234,10 +234,47 @@ LIMIT 3 OFFSET 2;
 LIMIT 2, 3;
 ```
 
+## Requêtes imbriquées
+
+
+## Transactions
+
+```sql
+BEGIN TRANSACTION;
+
+DELETE FROM recipes WHERE id = 1;
+
+DELETE FROM recipes WHERE id = 1; -- Cette ligne n'empêche pas à la transaction de COMMIT 
+
+COMMIT TRANSACTION;
+```
+
+## Les vues
+
+```sql
+CREATE VIEW recipes_list_per_plate AS ...
+```
+
+## Les triggers
+
+Ce sont des Event Listener du SQL.
+
+
+```sql
+CREATE TRIGGER increment_usage_count_on_ingredients_linked
+AFTER INSERT ON ingredients_recipes
+BEGIN
+    UPDATE ingredients
+    SET usage_count = usage_count + 1
+    WHERE id = NEW.ingredient_id;
+END;
+```
+
 
 ## EXPLAIN QUERY PLAN
 
 Commande qui explicite le processus par lequel chemine le langage.
+
 
 
 ```sql
