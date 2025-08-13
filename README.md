@@ -170,9 +170,60 @@ CREATE TABLE IF NOT EXISTS recipes (
 -- ON DELETE SET NULL : Comme son nom l'indique
 ```
 
+## Agrégation des données
+
+`COUNT`, `SUM` , `` ...
+
 ```sql
+SELECT GROUP_CONCAT(title, ' - ') as merged_recipes -- le ' - ' est identique au join en Javascript
+FROM recipes;
+```
+
+#### GROUP BY
+
+```sql
+SELECT COUNT(id), duration
+FROM recipes
+GROUP BY duration;
+```
+
+Utiliser `HAVING` au lieu de `WHERE` :
+
+```sql
+SELECT COUNT(id), duration
+FROM recipes
+GROUP BY duration
+HAVING duration < 40;
+```
+
+On peut aussi utiliser une jointure dans le `GROUP BY` :
+
+```sql
+SELECT c.label, COUNT(r.id) as recipe_number
+FROM recipes r
+JOIN category c
+ON category_id = c.id
+GROUP BY c.label;
+```
+
+Groupement multiple :
+
+```sql
+SELECT c.label, COUNT(r.id) as recipe_number, r.title
+FROM recipes r
+JOIN category c
+ON category_id = c.id
+GROUP BY c.label, r.title; -- On regroupe par label et par titre, ce qui va dupliquer certains label
 ```
 
 ## EXPLAIN QUERY PLAN
 
 Commande qui explicite le processus par lequel chemine le langage.
+
+
+```sql
+```
+
+
+```sql
+```
