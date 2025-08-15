@@ -279,7 +279,3 @@ Commande qui explicite le processus par lequel chemine le langage.
 
 ```sql
 ```
-
-
-```sql
-```
