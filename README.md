@@ -170,6 +170,7 @@ CREATE TABLE IF NOT EXISTS recipes (
 -- ON DELETE SET NULL : Comme son nom l'indique
 ```
 
+
 ## Agrégation des données
 
 `COUNT`, `SUM` , `AVG` ...
